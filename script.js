@@ -20,7 +20,7 @@ function showSurprise() {
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 10000);
   }
-  alert("💖 Selamat Hari Valentine, Sayang! Aku mencintaimu! 💖");
+  alert("💖 Selamat Hari Valentine, ayanggg akohhhh! loppyuuuuuu! 💖");
 }
 
 // Tambahkan di akhir file
@@ -55,3 +55,18 @@ function createHeart() {
 }
 
 setInterval(createHeart, 300);
+document.addEventListener("mousemove", function (e) {
+  const heart = document.createElement("div");
+  heart.innerHTML = "💖";
+  heart.style.position = "absolute";
+  heart.style.top = `${e.clientY}px`;
+  heart.style.left = `${e.clientX}px`;
+  heart.style.fontSize = "1.5em";
+  heart.style.pointerEvents = "none";
+  heart.style.animation = "fade 1s linear";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 1000);
+});
